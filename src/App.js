@@ -29,7 +29,7 @@ class App extends Component {
 
   onSearch = (city) => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=0f8008c18e2539534e634fbe5342ae70&units=metric`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${process.env.REACT_APP_API_KEY}&units=metric`
     )
       .then((res) => res.json())
       .then((data) => {
